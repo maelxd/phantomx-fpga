@@ -1,0 +1,11 @@
+More development goals:
+(cause I always follow these...)
+
+It would be worth finding a way to speed up DNET, so that it meets timing more readily.
+Combine DNET and Ethernet Access to DDR, such that it only uses a single DMA interface. (can assume one without the other)
+This should improve timing anyway...
+Move the ethernet-ddr module into the toplevel, to allow easier access to DNET master signals
+
+Also, burst read should be finished. It does strike me as odd how the scope expanded to cover this sort of operation, but it is probably better than the other options anyway.
+May need some sort of "blind" burst mode, ie, read back more than just 1.5K at a time.  In other words, have a read send back multiple packets! (could be tricky)
+Change video store to a fifo and investigate the error conditions!

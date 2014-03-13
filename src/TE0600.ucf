@@ -1,0 +1,153 @@
+
+# xc6slx45-2fgg484 xc6slx100-2fgg484 xc6slx150-2fgg484
+
+# Configuration
+CONFIG VCCAUX  = 2.5;
+# Valid values are 2.5 and 3.3
+CONFIG MCB_PERFORMANCE  = EXTENDED;
+
+# System Signals
+#125MHz clock
+NET "sys_clk" IOSTANDARD = LVCMOS33;
+NET "sys_clk" LOC = AA12;
+NET "reset_n" IOSTANDARD = LVCMOS33;
+NET "reset_n" LOC = T6;
+#dummy
+NET "rst" IOSTANDARD = LVCMOS33;
+NET "rst" PULLDOWN;
+NET "rst" LOC = A4;
+#LED
+NET "led" IOSTANDARD = LVCMOS33;
+NET "led" LOC = T20;
+#LED B2B_B3_L59_N
+NET "aux_led[0]" IOSTANDARD = LVCMOS15;
+NET "aux_led[0]" LOC = H8;
+#LED B2B_B3_L59_P
+NET "aux_led[1]" IOSTANDARD = LVCMOS15;
+NET "aux_led[1]" LOC = J7;
+#LED B2B_B3_L9_P
+NET "aux_led[2]" IOSTANDARD = LVCMOS15;
+NET "aux_led[2]" LOC = T4;
+#LED B2B_B3_L9_N
+NET "aux_led[3]" IOSTANDARD = LVCMOS15;
+NET "aux_led[3]" LOC = T3;
+#NET reprog_n			LOC = H16	|	IOSTANDARD = LVCMOS33; #REPROGRAMMING 
+#NET wdi				LOC = V9	|	IOSTANDARD = LVCMOS33; #WATCHDOG INPUT
+
+# USB2UART Interface
+# B2B J2:86
+NET "uart_tx" IOSTANDARD = LVCMOS33;
+NET "uart_tx" LOC = A18;
+# B2B J2:84
+NET "uart_rx" IOSTANDARD = LVCMOS33;
+NET "uart_rx" LOC = C17;
+
+# Dynamixels
+NET "dynamixel_io[0]" IOSTANDARD = LVCMOS33;
+NET "dynamixel_io[0]" LOC = R8;
+NET "dynamixel_io[1]" IOSTANDARD = LVCMOS33;
+NET "dynamixel_io[1]" LOC = R9;
+NET "dynamixel_io[2]" IOSTANDARD = LVCMOS33;
+NET "dynamixel_io[2]" LOC = T7;
+NET "dynamixel_io[3]" IOSTANDARD = LVCMOS33;
+NET "dynamixel_io[3]" LOC = R7;
+NET "dynamixel_io[4]" IOSTANDARD = LVCMOS33;
+NET "dynamixel_io[4]" LOC = AB6;
+NET "dynamixel_io[5]" IOSTANDARD = LVCMOS33;
+NET "dynamixel_io[5]" LOC = AA6;
+NET "dynamixel_io[6]" IOSTANDARD = LVCMOS33;
+NET "dynamixel_io[6]" LOC = AB4;
+NET "dynamixel_io[7]" IOSTANDARD = LVCMOS33;
+NET "dynamixel_io[7]" LOC = AA4;
+NET "dynamixel_io[8]" IOSTANDARD = LVCMOS33;
+NET "dynamixel_io[8]" LOC = V13;
+NET "dynamixel_io[9]" IOSTANDARD = LVCMOS33;
+NET "dynamixel_io[9]" LOC = W13;
+NET "dynamixel_io[10]" IOSTANDARD = LVCMOS33;
+NET "dynamixel_io[10]" LOC = Y10;
+NET "dynamixel_io[11]" IOSTANDARD = LVCMOS33;
+NET "dynamixel_io[11]" LOC = W10;
+NET "dynamixel_io[12]" IOSTANDARD = LVCMOS33;
+NET "dynamixel_io[12]" LOC = V17;
+NET "dynamixel_io[13]" IOSTANDARD = LVCMOS33;
+NET "dynamixel_io[13]" LOC = W17;
+NET "dynamixel_io[14]" IOSTANDARD = LVCMOS33;
+NET "dynamixel_io[14]" LOC = U16;
+NET "dynamixel_io[15]" IOSTANDARD = LVCMOS33;
+NET "dynamixel_io[15]" LOC = U17;
+NET "dynamixel_io[16]" IOSTANDARD = LVCMOS33;
+NET "dynamixel_io[16]" LOC = AB8;
+NET "dynamixel_io[17]" IOSTANDARD = LVCMOS33;
+NET "dynamixel_io[17]" LOC = AA8;
+NET "dynamixel_io[18]" IOSTANDARD = LVCMOS33;
+NET "dynamixel_io[18]" LOC = AB7;
+NET "dynamixel_io[19]" IOSTANDARD = LVCMOS33;
+NET "dynamixel_io[19]" LOC = Y7;
+NET "dynamixel_io[20]" IOSTANDARD = LVCMOS33;
+NET "dynamixel_io[20]" LOC = AB10;
+NET "dynamixel_io[21]" IOSTANDARD = LVCMOS33;
+NET "dynamixel_io[21]" LOC = AA10;
+NET "dynamixel_io[22]" IOSTANDARD = LVCMOS33;
+NET "dynamixel_io[22]" LOC = AB9;
+NET "dynamixel_io[23]" IOSTANDARD = LVCMOS33;
+NET "dynamixel_io[23]" LOC = Y9;
+
+# Servo IO
+NET "servo_io[0]" IOSTANDARD = LVCMOS33;
+NET "servo_io[0]" LOC = V19;
+NET "servo_io[1]" IOSTANDARD = LVCMOS33;
+NET "servo_io[1]" LOC = V18;
+NET "servo_io[2]" IOSTANDARD = LVCMOS33;
+NET "servo_io[2]" LOC = Y18;
+NET "servo_io[3]" IOSTANDARD = LVCMOS33;
+NET "servo_io[3]" LOC = W18;
+NET "servo_io[4]" IOSTANDARD = LVCMOS33;
+NET "servo_io[4]" LOC = AB17;
+NET "servo_io[5]" IOSTANDARD = LVCMOS33;
+NET "servo_io[5]" LOC = Y17;
+NET "servo_io[6]" IOSTANDARD = LVCMOS33;
+NET "servo_io[6]" LOC = AB15;
+NET "servo_io[7]" IOSTANDARD = LVCMOS33;
+NET "servo_io[7]" LOC = Y15;
+
+# XBee
+NET "xbee_dout" IOSTANDARD = LVCMOS33;
+NET "xbee_dout" LOC = Y19;
+NET "xbee_din" IOSTANDARD = LVCMOS33;
+NET "xbee_din" LOC = T17;
+NET "xbee_cts" IOSTANDARD = LVCMOS33;
+NET "xbee_cts" LOC = R15;
+NET "xbee_dtr" IOSTANDARD = LVCMOS33;
+NET "xbee_dtr" LOC = AB19;
+NET "xbee_rts" IOSTANDARD = LVCMOS33;
+NET "xbee_rts" LOC = T18;
+NET "xbee_io[0]" IOSTANDARD = LVCMOS33;
+NET "xbee_io[0]" LOC = R16;
+NET "xbee_io[1]" IOSTANDARD = LVCMOS33;
+NET "xbee_io[1]" LOC = AB12;
+
+# Servo PMOD
+NET "pmod_exp[0]" IOSTANDARD = LVCMOS33;
+NET "pmod_exp[0]" LOC = AB11;
+NET "pmod_exp[1]" IOSTANDARD = LVCMOS33;
+NET "pmod_exp[1]" LOC = Y12;
+NET "pmod_exp[2]" IOSTANDARD = LVCMOS33;
+NET "pmod_exp[2]" LOC = W11;
+NET "pmod_exp[3]" IOSTANDARD = LVCMOS33;
+NET "pmod_exp[3]" LOC = V11;
+
+# Raspberry PI
+NET "rasp_spi_clk_in" IOSTANDARD = LVTTL;
+NET "rasp_spi_clk_in" LOC = C13;
+NET "rasp_spi_miso_out" IOSTANDARD = LVTTL;
+NET "rasp_spi_miso_out" LOC = C15;
+NET "rasp_spi_mosi_in" IOSTANDARD = LVTTL;
+NET "rasp_spi_mosi_in" LOC = B16;
+NET "rasp_spi_ncs0_in" IOSTANDARD = LVTTL;
+NET "rasp_spi_ncs0_in" LOC = C14;
+
+# Timing Constraints
+NET "sys_clk" TNM_NET = "sys_clk";
+TIMESPEC TS_sys_clk = PERIOD "sys_clk" 8 ns HIGH 50 %;
+
+# PlanAhead Generated IO constraints 
