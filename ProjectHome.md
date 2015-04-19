@@ -1,0 +1,1 @@
+This is a small project investigating the use of an FPGA to control a PhantomX hexapod. The RaspberryPi is used for higher level decision making and planning, while the FPGA handles interfacing to the Dynamixels, Inverse Kinematics, Path Interpolation and Timing.
